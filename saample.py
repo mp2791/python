@@ -11,7 +11,8 @@ quarterly_sales = pd.pivot_table(filtered, index = filtered['Date'].dt.quarter, 
 
 print("Quarterly Sales Pivot Table:")
 print(quarterly_sales.head())
-
+file_path = #Path to where you want your file saved
+quarterly_sales.to_excel(file_path, sheet_name = 'Quarterly Sales', startrow=3)
 # Section 05 - Loading the Workbook
 wb = load_workbook(file_path)
 sheet1 = wb['Quarterly Sales']
